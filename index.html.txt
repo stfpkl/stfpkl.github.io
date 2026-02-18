@@ -1,0 +1,318 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Copywriting | Produktbeschreibungen (DE/EN)</title>
+  <meta name="description" content="Kreative, verkaufsstarke Produktbeschreibungen auf Deutsch und Englisch – spezialisiert auf Musik- und Lifestyle-Brands." />
+  <style>
+    :root{
+      --bg:#0b0f14;
+      --card:#0f1620;
+      --text:#e9eef6;
+      --muted:#a9b6c7;
+      --line:#1e2a3a;
+      --accent:#5dd6ff;
+      --accent2:#a8ff9e;
+      --shadow: 0 10px 30px rgba(0,0,0,.35);
+      --radius: 18px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+      background: radial-gradient(1200px 800px at 20% 10%, rgba(93,214,255,.18), transparent 55%),
+                  radial-gradient(1200px 800px at 80% 20%, rgba(168,255,158,.14), transparent 55%),
+                  var(--bg);
+      color:var(--text);
+      line-height:1.55;
+    }
+    a{color:inherit; text-decoration:none}
+    .wrap{max-width:1060px; margin:0 auto; padding:28px 18px 72px}
+    .nav{
+      display:flex; align-items:center; justify-content:space-between;
+      gap:14px; padding:14px 16px; border:1px solid var(--line);
+      background:rgba(15,22,32,.68); backdrop-filter: blur(10px);
+      border-radius: 999px; box-shadow: var(--shadow);
+      position: sticky; top: 14px; z-index: 10;
+    }
+    .brand{display:flex; align-items:center; gap:10px; font-weight:700; letter-spacing:.2px}
+    .dot{width:10px; height:10px; border-radius:999px; background:linear-gradient(135deg,var(--accent),var(--accent2))}
+    .navlinks{display:flex; gap:14px; flex-wrap:wrap; justify-content:flex-end}
+    .navlinks a{font-size:14px; color:var(--muted); padding:8px 10px; border-radius:999px}
+    .navlinks a:hover{background:rgba(255,255,255,.06); color:var(--text)}
+
+    .hero{display:grid; grid-template-columns: 1.25fr .75fr; gap:22px; margin-top:22px; align-items:stretch}
+    @media (max-width: 860px){ .hero{grid-template-columns: 1fr; } .nav{border-radius:18px}}
+
+    .card{background:rgba(15,22,32,.78); border:1px solid var(--line); border-radius:var(--radius); box-shadow:var(--shadow)}
+    .heroMain{padding:28px}
+    .kicker{display:inline-flex; align-items:center; gap:10px; padding:8px 12px; border-radius:999px;
+      border:1px solid rgba(93,214,255,.35);
+      background:rgba(93,214,255,.08);
+      color:var(--text);
+      font-size:13px
+    }
+    .kicker span{color:var(--muted)}
+    h1{margin:14px 0 10px; font-size:40px; line-height:1.1}
+    @media (max-width: 520px){ h1{font-size:34px} }
+    .sub{color:var(--muted); font-size:16px; margin:0 0 18px}
+    .ctaRow{display:flex; gap:12px; flex-wrap:wrap; margin-top:16px}
+    .btn{
+      display:inline-flex; align-items:center; justify-content:center; gap:10px;
+      padding:11px 14px; border-radius:12px; border:1px solid var(--line);
+      background:rgba(255,255,255,.06);
+      font-weight:650; font-size:14px;
+    }
+    .btn:hover{background:rgba(255,255,255,.10)}
+    .btnPrimary{border-color:rgba(93,214,255,.45); background:linear-gradient(135deg, rgba(93,214,255,.18), rgba(168,255,158,.12))}
+    .btnPrimary:hover{filter:brightness(1.06)}
+
+    .heroSide{padding:18px; display:flex; flex-direction:column; gap:12px}
+    .pfp{
+      width:100%; aspect-ratio: 1/1; border-radius: 16px;
+      object-fit: cover; border:1px solid var(--line);
+      background: #0a0f15;
+    }
+    .mini{padding:14px; border-radius:14px; border:1px solid var(--line); background:rgba(255,255,255,.03)}
+    .mini b{display:block; margin-bottom:4px}
+    .mini span{color:var(--muted); font-size:14px}
+
+    .grid{display:grid; grid-template-columns: repeat(12, 1fr); gap:18px; margin-top:18px}
+    .col6{grid-column: span 6}
+    .col4{grid-column: span 4}
+    .col8{grid-column: span 8}
+    .col12{grid-column: span 12}
+    @media (max-width: 860px){ .col6,.col4,.col8{grid-column: span 12} }
+
+    .section{padding:22px}
+    .section h2{margin:0 0 12px; font-size:20px}
+    .muted{color:var(--muted)}
+
+    .pillRow{display:flex; gap:10px; flex-wrap:wrap}
+    .pill{font-size:13px; color:var(--text); padding:8px 10px; border-radius:999px;
+      border:1px solid rgba(255,255,255,.10); background:rgba(255,255,255,.04)}
+
+    .list{margin:10px 0 0; padding-left:18px; color:var(--muted)}
+    .list li{margin:6px 0}
+
+    .pricing{display:grid; grid-template-columns: repeat(3,1fr); gap:14px}
+    @media (max-width: 860px){ .pricing{grid-template-columns: 1fr} }
+    .priceCard{padding:18px; border-radius:16px; border:1px solid var(--line); background:rgba(255,255,255,.03)}
+    .priceName{font-weight:750}
+    .price{font-size:28px; margin:8px 0 8px}
+    .price small{font-size:13px; color:var(--muted)}
+
+    .samples{display:grid; grid-template-columns: 1fr 1fr; gap:14px}
+    @media (max-width: 860px){ .samples{grid-template-columns: 1fr} }
+    .sample{padding:16px; border-radius:16px; border:1px solid var(--line); background:rgba(255,255,255,.03)}
+    .sample h3{margin:0 0 8px; font-size:16px}
+    .sample p{margin:0; color:var(--muted)}
+
+    .footer{margin-top:22px; padding:18px; text-align:center; color:var(--muted); font-size:13px}
+    .tag{display:inline-flex; align-items:center; gap:8px}
+    .tag i{width:8px; height:8px; border-radius:999px; display:inline-block; background:var(--accent)}
+
+    /* Smooth scroll */
+    html{scroll-behavior:smooth}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="nav">
+      <div class="brand"><span class="dot"></span> <span>Produkttexte • Copywriting</span></div>
+      <div class="navlinks">
+        <a href="#services">Services</a>
+        <a href="#skills">Skills</a>
+        <a href="#packages">Pakete</a>
+        <a href="#samples">Beispiele</a>
+        <a href="#contact">Kontakt</a>
+      </div>
+    </div>
+
+    <div class="hero">
+      <div class="card heroMain">
+        <div class="kicker"><span class="tag"><i></i></span> Deutsch & Englisch <span>•</span> kreativ, verkaufsstark, markengerecht</div>
+        <h1>Ich schreibe Produktbeschreibungen, die verkaufen — und trotzdem nach deiner Brand klingen.</h1>
+        <p class="sub">Fokus: <b>Musik-Equipment</b>, <b>Streetwear</b> & <b>Lifestyle-Produkte</b>. Klare Vorteile, starke Bilder im Kopf, saubere Struktur. Ideal für Shopify, Amazon, Etsy & eigene Shops.</p>
+
+        <div class="ctaRow">
+          <a class="btn btnPrimary" href="#contact">?? Jetzt anfragen</a>
+          <a class="btn" href="#samples">?? Text-Beispiele ansehen</a>
+          <a class="btn" href="#packages">?? Pakete & Preise</a>
+        </div>
+
+        <ul class="list">
+          <li><b>Keine Vorlagen.</b> Jeder Text individuell.</li>
+          <li><b>Benefit-first:</b> Features werden zu Kaufargumenten.</li>
+          <li><b>Ton & Stil:</b> minimalistisch, edgy, premium, friendly — wie du willst.</li>
+        </ul>
+      </div>
+
+      <div class="card heroSide">
+        <!--
+          ? FOTO EINBINDEN
+          1) Speichere dein Bild als: profile.jpg
+          2) Lege es in den gleichen Ordner wie diese HTML-Datei
+        -->
+        <img class="pfp" src="profile.jpg" alt="Profilfoto" />
+
+        <div class="mini">
+          <b>Was du bekommst</b>
+          <span>Produkttexte, die sich nach Marke anfühlen und nach Verkauf klingen.</span>
+        </div>
+        <div class="mini">
+          <b>Sprachen</b>
+          <span>Deutsch (fließend) • English (fluent)</span>
+        </div>
+        <div class="mini">
+          <b>Style-Fokus</b>
+          <span>Creative copy • Brand voice • Storytelling</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="grid">
+      <div id="services" class="card section col8">
+        <h2>Services</h2>
+        <p class="muted">Du schickst mir Produktinfos + Wunsch-Tonalität. Ich liefere saubere, verkaufsstarke Texte, die sich direkt einfügen lassen.</p>
+        <div class="pillRow" style="margin-top:12px">
+          <span class="pill">Product Descriptions (DE)</span>
+          <span class="pill">Product Descriptions (EN)</span>
+          <span class="pill">Brand Voice Anpassung</span>
+          <span class="pill">Kurz- & Langversion</span>
+          <span class="pill">Varianten / A-B Versionen</span>
+        </div>
+        <ul class="list">
+          <li>Hook / Einstiegssatz, der direkt packt</li>
+          <li>Klare Benefits + Social Proof / Vibe (wenn passend)</li>
+          <li>Struktur (Bulletpoints + Fließtext) für schnelle Lesbarkeit</li>
+        </ul>
+      </div>
+
+      <div class="card section col4">
+        <h2>Ideal für</h2>
+        <p class="muted">Wenn dein Produkt mehr ist als „Material + Größe“.</p>
+        <ul class="list">
+          <li>Studio- & Recording Gear</li>
+          <li>Headphones / Speaker / Audio</li>
+          <li>Streetwear & Fashion Drops</li>
+          <li>Accessoires & Lifestyle</li>
+          <li>Digitale Produkte</li>
+        </ul>
+      </div>
+
+      <div id="skills" class="card section col12">
+        <h2>Skills & Expertise (Fiverr-ready)</h2>
+        <div class="pillRow">
+          <span class="pill">Copywriting</span>
+          <span class="pill">Product Description Writing</span>
+          <span class="pill">Creative Writing</span>
+          <span class="pill">Sales Copy</span>
+          <span class="pill">E-commerce Writing</span>
+          <span class="pill">Content Writing</span>
+          <span class="pill">Storytelling</span>
+          <span class="pill">Brand Voice Development</span>
+          <span class="pill">Editing & Proofreading</span>
+          <span class="pill">Fashion / Lifestyle</span>
+          <span class="pill">Music</span>
+        </div>
+        <p class="muted" style="margin-top:12px">Tonalität: modern • premium • minimal • edgy • friendly. (Wir stimmen das pro Auftrag ab.)</p>
+      </div>
+
+      <div id="packages" class="card section col12">
+        <h2>Pakete</h2>
+        <p class="muted">Du willst nur schreiben (ohne SEO). Genau darauf ist das hier optimiert.</p>
+        <div class="pricing" style="margin-top:12px">
+          <div class="priceCard">
+            <div class="priceName">Basic</div>
+            <div class="price">20€ <small>/ 1 Produkt</small></div>
+            <ul class="list">
+              <li>1 Produktbeschreibung</li>
+              <li>bis 200 Wörter</li>
+              <li>kreativ & verkaufsorientiert</li>
+            </ul>
+          </div>
+          <div class="priceCard" style="border-color: rgba(93,214,255,.35)">
+            <div class="priceName">Standard</div>
+            <div class="price">45€ <small>/ 3 Produkte</small></div>
+            <ul class="list">
+              <li>3 Produktbeschreibungen</li>
+              <li>bis 200 Wörter je Text</li>
+              <li>einheitlicher Brand-Ton</li>
+            </ul>
+          </div>
+          <div class="priceCard" style="border-color: rgba(168,255,158,.30)">
+            <div class="priceName">Premium</div>
+            <div class="price">75€ <small>/ 5 Produkte</small></div>
+            <ul class="list">
+              <li>5 Produktbeschreibungen</li>
+              <li>bis 200 Wörter je Text</li>
+              <li>mehr Storytelling-Vibe</li>
+              <li>Ton-Feinschliff</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div id="samples" class="card section col12">
+        <h2>Text-Beispiele (Portfolio)</h2>
+        <p class="muted">Du kannst diese Beispiele direkt als Portfolio auf Fiverr nutzen (oder ich schreibe dir 3 neue auf deine Wunschprodukte).</p>
+        <div class="samples" style="margin-top:12px">
+          <div class="sample">
+            <h3>Beispiel 1 — Kopfhörer (Premium / Musik)</h3>
+            <p><b>Spür den Mix, nicht nur den Bass.</b> Diese Over-Ears liefern dir klare Höhen, satte Mitten und ein Low-End, das nicht matscht. Das Ergebnis: Du hörst Details, die du vorher überhört hast — vom Atem zwischen zwei Vocals bis zum leisen Reverb-Tail im Chorus. Bequem für lange Sessions, clean im Look und bereit für Studio, Gym oder Late-Night-City.</p>
+          </div>
+          <div class="sample">
+            <h3>Beispiel 2 — Streetwear Shirt (Drop / Lifestyle)</h3>
+            <p><b>Minimal vorne. Statement im Vibe.</b> Schwerer Stoff, cleaner Fit und ein Look, der sich nicht anbiedert. Dieses Shirt macht keinen Lärm — aber es wirkt. Für Tage, an denen du nicht „auffallen“ willst, sondern einfach präsent bist. Kombinier’s mit Denim, Layer it, oder trag’s solo: passt, ohne sich zu erklären.</p>
+          </div>
+          <div class="sample">
+            <h3>Beispiel 3 — Audio Plugin (Digital)</h3>
+            <p><b>Mach aus Rohmaterial einen Sound.</b> Dieses Plugin gibt dir schnelle Kontrolle über Wärme, Punch und Präsenz — ohne dich mit 30 Reglern zu erschlagen. Perfekt für Beats, Vocals und Synths: ein paar Moves, und dein Mix sitzt. Für Creator, die schneller releasen wollen, ohne beim Klang Kompromisse zu machen.</p>
+          </div>
+          <div class="sample">
+            <h3>Englisch-Snippet (optional)</h3>
+            <p><b>Built for late nights and loud systems.</b> A clean fit, a heavy feel, and a tone that stays you. This piece doesn’t chase trends — it sets a mood. Wear it layered or solo and let the details do the talking.</p>
+          </div>
+        </div>
+      </div>
+
+      <div id="contact" class="card section col12">
+        <h2>Kontakt / Anfrage</h2>
+        <p class="muted">Für Fiverr kannst du hier einfach deinen Gig-Link oder Nutzernamen eintragen. Für deine Website: Kontakttext + klare Requirements.</p>
+        <div class="grid" style="margin-top:10px">
+          <div class="col6">
+            <div class="priceCard">
+              <div class="priceName">Was ich von dir brauche</div>
+              <ul class="list">
+                <li>Produktname + kurze Beschreibung</li>
+                <li>Zielgruppe (wer kauft?)</li>
+                <li>Top 3–5 Features</li>
+                <li>Ton: z.B. premium / edgy / friendly</li>
+                <li>Link zum Produkt (falls vorhanden)</li>
+              </ul>
+            </div>
+          </div>
+          <div class="col6">
+            <div class="priceCard">
+              <div class="priceName">So erreichst du mich</div>
+              <p class="muted" style="margin:10px 0 0">? Fiverr: <b>@stfpkl</b></p>
+              <p class="muted" style="margin:8px 0 0">? Gig: <b>DEIN_GIG_LINK</b></p>
+              <p class="muted" style="margin:8px 0 0">(Ersetze die Platzhalter, dann ist die Seite sofort ready.)</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer col12">
+        <span class="muted">© <span id="y"></span> • Produktbeschreibungen (DE/EN) • Copywriting</span>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
